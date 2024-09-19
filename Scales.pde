@@ -1,16 +1,19 @@
 void setup() {
-  size(500, 500);  //feel free to change the size
+background(0,0,0);  
+size(1100, 1100);  //feel free to change the size
   noLoop(); //stops the draw() function from repeating
 }
 void draw() {
   //your code here
-  for( int x = 0; x < 1000; x = x + 70)
-       for( int y = 0; y < 1000; y = y + 70)
+    for( int x = 0; x < 1100; x = x + 100)
+       for( int y = 0; y < 1100; y = y + 100)
        scale(x, y);
 }
 void scale(int x, int y) {
   //your code here
-fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+
+stroke(5);  
+  fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
     beginShape();
     curveVertex(x + 424 + (int)(Math.random()*15), y + 52);
     curveVertex(x + 64, y + 215+(int)(Math.random()*18));
@@ -21,19 +24,11 @@ fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255))
     curveVertex(x + 120+(int)(Math.random()*15), y + 422);
     curveVertex(x + 125, y + 152+(int)(Math.random()*37));
     endShape();
-    noStroke();
-    if(Math.random() < 0.33){
-     fill(0,0,0);
-    beginShape();
-    vertex(x + 10+(int)(Math.random()*11), y + 21+(int)(Math.random()*11));
-    vertex(x + 176+(int)(Math.random()*13), y + 32+(int)(Math.random()*12));
-    vertex(x + 189+(int)(Math.random()*9), y + 122+(int)(Math.random()*14));
-    vertex(x + 245+(int)(Math.random()*4), y + 321+(int)(Math.random()*15));
-    vertex(x + 324+(int)(Math.random()*6), y + 153+(int)(Math.random()*2));
-    vertex(x + 91+(int)(Math.random()*15), y + 56+(int)(Math.random()*9));
-    vertex(x + 32+(int)(Math.random()*19), y + 47+(int)(Math.random()*6));
-    endShape();
-    }
-}
-}
+    fill(0,0,0);
+    ellipse( x + 5, y + 20, 20,20);
+    ellipse( x + 30, y + 20, 20,20);
+    ellipse( x , y + 60, 40 + (int)(Math.random()*10),40+ (int)(Math.random()*10));
+
+    
+}  
 
